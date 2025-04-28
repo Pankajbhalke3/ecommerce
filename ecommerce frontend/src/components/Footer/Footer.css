@@ -1,0 +1,119 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 40px 20px;
+    background: linear-gradient(to top, #f0f4f8, #ffffff);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo p {
+    color: #1e293b;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    color: #334155;
+    font-size: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links li {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-links li:hover {
+    color: #2563eb;
+}
+
+.footer-social-icon {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-icon-container {
+    padding: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.footer-icon-container:hover {
+    background: #e0f2fe;
+    transform: scale(1.1);
+}
+
+.footer-icon-container img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #475569;
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer-copyright hr {
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    height: 3px;
+    background: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .footer {
+        gap: 30px;
+        padding: 30px 15px;
+    }
+
+    .footer-logo {
+        gap: 10px;
+    }
+
+    .footer-logo img {
+        width: 40px;
+    }
+
+    .footer-logo p {
+        font-size: 28px;
+    }
+
+    .footer-links {
+        font-size: 14px;
+        gap: 15px;
+    }
+
+    .footer-icon-container img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-copyright {
+        font-size: 13px;
+    }
+}

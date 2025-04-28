@@ -1,0 +1,16 @@
+.admin {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive: stack sidebar and content vertically on smaller screens */
+@media (max-width: 800px) {
+    .admin {
+        flex-direction: column;
+        background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+        padding: 10px;
+    }
+}

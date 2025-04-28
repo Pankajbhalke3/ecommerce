@@ -1,0 +1,56 @@
+.breadcrum {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #374151; /* deep gray for readability */
+    font-size: 16px;
+    font-weight: 600;
+    margin: 60px 170px;
+    text-transform: capitalize;
+    background: linear-gradient(to right, #fef9f9, #f1f5f9);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.breadcrum p {
+    margin: 0;
+    color: #9ca3af; /* soft divider color */
+    font-weight: bold;
+}
+
+/* Large screens */
+@media(max-width:1280px){
+    .breadcrum {
+        margin: 30px 50px;
+        font-size: 14px;
+    }
+}
+
+/* Medium tablets */
+@media(max-width:1024px){
+    .breadcrum {
+        margin: 30px 30px;
+        font-size: 13px;
+    }
+}
+
+/* Small tablets */
+@media(max-width:800px){
+    .breadcrum {
+        margin: 20px;
+        font-size: 12px;
+        flex-direction: row;
+    }
+}
+
+/* Mobile phones */
+@media(max-width:500px){
+    .breadcrum {
+        font-size: 11px;
+        margin: 15px 10px;
+        padding: 8px 12px;
+        border-radius: 8px;
+    }
+}
