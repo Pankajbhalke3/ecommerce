@@ -12,7 +12,7 @@ const { error } = require("console");
 app.use(express.json());
 app.use(cors(
     {
-  origin: 'https://ecommerce-frontend.vercel.app',
+  origin: 'https://ecommerce-mu-wheat.vercel.app',
   credentials: true
 }
 ));
