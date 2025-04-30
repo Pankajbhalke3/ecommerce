@@ -10,7 +10,12 @@ const { type } = require("os");
 const { error } = require("console");
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+  origin: 'https://ecommerce-frontend.vercel.app',
+  credentials: true
+}
+));
 
 //database connection toMongoDB
 mongoose.connect("mongodb+srv://pankajbhalke2909:Pankaj2909@cluster0.wvsrg3q.mongodb.net/e-commerce");
