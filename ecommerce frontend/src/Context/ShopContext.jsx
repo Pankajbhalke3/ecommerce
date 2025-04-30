@@ -20,12 +20,12 @@ const ShopContextProvider = (props) => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const productRes = await fetch('http://localhost:4000/allproducts');
+            const productRes = await fetch('https://shopper-xmp2.onrender.com/allproducts');
             const productData = await productRes.json();
             setAll_Product(productData);
       
             if (localStorage.getItem('auth-token')) {
-              const cartRes = await fetch('http://localhost:4000/getcart', {
+              const cartRes = await fetch('https://shopper-xmp2.onrender.com/getcart', {
                 method: 'POST',
                 headers: {
                   Accept: 'application/json',
@@ -54,7 +54,7 @@ const ShopContextProvider = (props) => {
       
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
       
-        fetch('http://localhost:4000/addtocart', {
+        fetch('https://shopper-xmp2.onrender.com/addtocart', {
           method: 'POST',
           headers: {
             Accept: 'application/form-data',
@@ -71,7 +71,7 @@ const ShopContextProvider = (props) => {
     const removeFromCart = (itemId)=>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/removefromcart',{
+            fetch('https://shopper-xmp2.onrender.com/removefromcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
