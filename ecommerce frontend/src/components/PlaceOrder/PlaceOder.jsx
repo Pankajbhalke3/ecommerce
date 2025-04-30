@@ -30,7 +30,7 @@ const PlaceOrder = () => {
       totalAmount: getTotalCartAmount(),
     };
 
-    const res = await fetch("http://localhost:4000/placeorder", {
+    const res = await fetch("https://shopper-xmp2.onrender.com/placeorder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
