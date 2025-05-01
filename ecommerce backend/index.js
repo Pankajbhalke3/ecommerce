@@ -10,12 +10,23 @@ const { type } = require("os");
 const { error } = require("console");
 
 app.use(express.json());
-app.use(cors(
-    {
-  origin: 'https://ecommerce-mu-wheat.vercel.app',
+
+const allowedOrigins = [
+  'https://ecommerce-mu-wheat.vercel.app',
+  'https://ecommerce-uan1.vercel.app'
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
-}
-));
+}));
+
 
 //database connection toMongoDB
 mongoose.connect("mongodb+srv://pankajbhalke2909:Pankaj2909@cluster0.wvsrg3q.mongodb.net/e-commerce");
