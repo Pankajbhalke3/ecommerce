@@ -120,8 +120,7 @@
     }
 
     .shopcategory-sort {
-        font-size: 12px;
-        padding: 6px 12px;
+        display: none;
     }
 
     .shopcategory-indexSort p {
@@ -141,10 +140,6 @@
     .shopcategory-products {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-
-    .shopcategory-sort {
-        font-size: 12px;
     }
 
     .shopcategory-indexSort {
