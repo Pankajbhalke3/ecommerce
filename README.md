@@ -1,5 +1,8 @@
-live link for ecommerce:
+Live link for ecommerce:
 [open](https://ecommerce-mu-wheat.vercel.app)
+
+Live link for Admin panel:
+[open](https://ecommerce-uan1.vercel.app)
 
 
 Features:
