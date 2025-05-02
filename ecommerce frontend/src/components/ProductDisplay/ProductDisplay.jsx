@@ -37,9 +37,9 @@ const ProductDisplay = (props) => {
           <div className="productdisplay-right-prices-new">{product.new_price}Rs</div>
         </div>
         <div className="productdisplay-right-description">
-          pullover shirt
-          a round neckline and short sleeves
-          worn as aundershirt
+          Own it.
+            Wear it. 
+             Love it. 💖
         </div>
         <div className="productdisplay-right-size">  
           <h1>Select size</h1>
