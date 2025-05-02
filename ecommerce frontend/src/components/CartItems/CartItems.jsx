@@ -61,7 +61,7 @@ const CartItems = () => {
                 <h3>${totalAmount}</h3>
               </div>
             </div>
-            <button onClick={() => navigate('/placeorder')}>PROCEED TO CHECKOUT</button>
+            <button onClick={() => navigate('/placeorder')}>PROCEED TO PLACEORDER</button>
           </div>
         </div>
       )}
