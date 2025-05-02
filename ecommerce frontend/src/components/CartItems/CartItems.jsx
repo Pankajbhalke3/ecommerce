@@ -8,6 +8,11 @@ import { useNavigate } from 'react-router-dom';
 const CartItems = () => {
     const navigate = useNavigate();
     const {getTotalCartAmount,all_product,cartItems,removeFromCart} = useContext(ShopContext);
+
+    const totalAmount = getTotalCartAmount();
+
+  const isCartEmpty = Object.values(cartItems).every((quantity) => quantity === 0);
+
   return (
     <div className='cartitems'>
       <div className="cartitems-format-main">
@@ -36,35 +41,36 @@ const CartItems = () => {
         }
         return null;
       })}
-      <div className="cartitems-down">
-        <div className="cartitems-total">
-          <h1>cart Totals</h1>
-          <div>
-            <div className="cartitems-total-item">
-              <p>Subtotal</p>
-              <p>{getTotalCartAmount()}Rs </p>
+      {!isCartEmpty && (
+        <div className='cartitems-down'>
+          <div className='cartitems-total'>
+            <h1>Cart Totals</h1>
+            <div>
+              <div className='cartitems-total-item'>
+                <p>Subtotal</p>
+                <p>${totalAmount}</p>
+              </div>
+              <hr />
+              <div className='cartitems-total-item'>
+                <p>Shipping Fee</p>
+                <p>Free</p>
+              </div>
+              <hr />
+              <div className='cartitems-total-item'>
+                <h3>Total</h3>
+                <h3>${totalAmount}</h3>
+              </div>
             </div>
-            <hr />
-            <div className="cartitems-total-item">
-              <p>Shipping Fee</p>
-              <p>Free</p>
-            </div>
-            <hr />
-            <div className="cartitems-total-item">
-              <h3>Total</h3>
-              <h3>{getTotalCartAmount()}Rs </h3>
-            </div>
-          </div>
-          <button onClick={() => navigate('/placeorder')}>PROCEED TO CHECKOUT</button>        
-          </div>
-        <div className="cartitems-promomode">
-          <p>If you have a promo code, Enter it here</p>
-          <div className="cartitems-promobox">
-            <input type="text" placeholder='promo code'/>
-            <button>Submit</button>
+            <button onClick={() => navigate('/placeorder')}>PROCEED TO CHECKOUT</button>
           </div>
         </div>
-      </div>
+      )}
+
+      {isCartEmpty && (
+        <div style={{ textAlign: 'center', marginTop: '30px', fontSize: '18px' }}>
+          🛒 Your cart is empty.
+        </div>
+      )}
     </div>
   )
 }
