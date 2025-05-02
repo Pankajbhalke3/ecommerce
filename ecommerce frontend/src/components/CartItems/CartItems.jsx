@@ -2,8 +2,11 @@ import React, { useContext } from 'react'
 import './CartItems.css'
 import { ShopContext } from '../../Context/ShopContext'
 import remove_icon from '../Asset/remove_icon.png'
+import { useNavigate } from 'react-router-dom';
+
 
 const CartItems = () => {
+    const navigate = useNavigate();
     const {getTotalCartAmount,all_product,cartItems,removeFromCart} = useContext(ShopContext);
   return (
     <div className='cartitems'>
@@ -52,8 +55,8 @@ const CartItems = () => {
               <h3>{getTotalCartAmount()}Rs </h3>
             </div>
           </div>
-          <button>PROCEED TO CHECKOUT</button>
-        </div>
+          <button onClick={() => navigate('/placeorder')}>PROCEED TO CHECKOUT</button>        
+          </div>
         <div className="cartitems-promomode">
           <p>If you have a promo code, Enter it here</p>
           <div className="cartitems-promobox">
